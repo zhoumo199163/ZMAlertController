@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1727479B20D946AE00EF8577 /* UIAlertController+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 1727479A20D946AE00EF8577 /* UIAlertController+Custom.m */; };
 		98C11F2F1E6403B900097CC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C11F2E1E6403B900097CC0 /* main.m */; };
 		98C11F321E6403B900097CC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C11F311E6403B900097CC0 /* AppDelegate.m */; };
 		98C11F351E6403B900097CC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C11F341E6403B900097CC0 /* ViewController.m */; };
 		98C11F381E6403B900097CC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C11F361E6403B900097CC0 /* Main.storyboard */; };
 		98C11F3A1E6403B900097CC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98C11F391E6403B900097CC0 /* Assets.xcassets */; };
 		98C11F3D1E6403B900097CC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C11F3B1E6403B900097CC0 /* LaunchScreen.storyboard */; };
-		98C11F461E64108600097CC0 /* UIAlertController+ZM_ShowAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C11F451E64108600097CC0 /* UIAlertController+ZM_ShowAlertController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1727479920D946AE00EF8577 /* UIAlertController+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Custom.h"; sourceTree = "<group>"; };
+		1727479A20D946AE00EF8577 /* UIAlertController+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Custom.m"; sourceTree = "<group>"; };
 		98C11F2A1E6403B900097CC0 /* ZMAlertController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZMAlertController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C11F2E1E6403B900097CC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		98C11F301E6403B900097CC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -27,8 +29,6 @@
 		98C11F391E6403B900097CC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98C11F3C1E6403B900097CC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98C11F3E1E6403B900097CC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		98C11F441E64108600097CC0 /* UIAlertController+ZM_ShowAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+ZM_ShowAlertController.h"; sourceTree = "<group>"; };
-		98C11F451E64108600097CC0 /* UIAlertController+ZM_ShowAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+ZM_ShowAlertController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +63,8 @@
 			children = (
 				98C11F301E6403B900097CC0 /* AppDelegate.h */,
 				98C11F311E6403B900097CC0 /* AppDelegate.m */,
+				1727479920D946AE00EF8577 /* UIAlertController+Custom.h */,
+				1727479A20D946AE00EF8577 /* UIAlertController+Custom.m */,
 				98C11F331E6403B900097CC0 /* ViewController.h */,
 				98C11F341E6403B900097CC0 /* ViewController.m */,
 				98C11F361E6403B900097CC0 /* Main.storyboard */,
@@ -70,8 +72,6 @@
 				98C11F3B1E6403B900097CC0 /* LaunchScreen.storyboard */,
 				98C11F3E1E6403B900097CC0 /* Info.plist */,
 				98C11F2D1E6403B900097CC0 /* Supporting Files */,
-				98C11F441E64108600097CC0 /* UIAlertController+ZM_ShowAlertController.h */,
-				98C11F451E64108600097CC0 /* UIAlertController+ZM_ShowAlertController.m */,
 			);
 			path = ZMAlertController;
 			sourceTree = "<group>";
@@ -156,7 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98C11F351E6403B900097CC0 /* ViewController.m in Sources */,
-				98C11F461E64108600097CC0 /* UIAlertController+ZM_ShowAlertController.m in Sources */,
+				1727479B20D946AE00EF8577 /* UIAlertController+Custom.m in Sources */,
 				98C11F321E6403B900097CC0 /* AppDelegate.m in Sources */,
 				98C11F2F1E6403B900097CC0 /* main.m in Sources */,
 			);
@@ -317,6 +317,7 @@
 				98C11F431E6403B900097CC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

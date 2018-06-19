@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UIAlertController+ZM_ShowAlertController.h"
+#import "UIAlertController+Custom.h"
 
 @interface ViewController ()
 
@@ -26,19 +26,18 @@
 }
 
 - (IBAction)clickedTwoButton:(id)sender {
-    [UIAlertController showAlertWithTitle:@"twoButton" message:@"cancel and someone" cancelButtonTitle:@"cancel" otherButtonTitle:@"i am someone" handler:^(UIAlertAction * _Nonnull action, NSInteger index) {
-        if(index == 0) NSLog(@"this is cancelAlert");
-        else NSLog(@"this is someone");
-            
+    [UIAlertController showAlertWithTitle:@"TwoButton" message:@"cancel and someone" cancelButtonTitle:@"cancel" otherButtonTitle:@"i am someone" handler:^(UIAlertAction * _Nonnull action, NSInteger index) {
+        NSLog(@"index:%ld,action:%@",(long)index,action);
     }];
 }
 
-- (IBAction)clickedFreeButton:(id)sender {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"free buttons" message:@"all buttons" preferredStyle:UIAlertControllerStyleAlert cancelButtonTitle:@"cancel" otherButtonTitles:@"one",@"two",@"three", nil];
+- (IBAction)clickedCustomButton:(id)sender {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Custom buttons" message:@"All buttons" preferredStyle:UIAlertControllerStyleAlert cancelButtonTitle:@"cancel" otherButtonTitles:@"one",@"two",@"three", nil];
     [alertController showAlertControllerWithAnimated:YES handler:^(UIAlertAction * _Nonnull action, NSInteger index) {
-        NSLog(@"%@",action.title);
+        NSLog(@"index:%ld,action:%@",(long)index,action);
     }];
 }
+
 
 
 

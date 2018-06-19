@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^handlerBlock)(UIAlertAction *alertAction,NSInteger alertIndex);
+typedef void(^Alert_HandlerBlock)(UIAlertAction *alertAction,NSInteger alertIndex);
 
 @class UIAlertAction;
-@interface UIAlertController (ZM_ShowAlertController)
+@interface UIAlertController (Custom)
 
 
 + (_Nonnull instancetype)alertControllerWithTitle:(nullable NSString *)title message:(nullable NSString *)message preferredStyle:(UIAlertControllerStyle)preferredStyle cancelButtonTitle:(nullable NSString *)cancelButtonTitle otherButtonTitles:(nullable NSString *)otherButtonTitles, ... NS_REQUIRES_NIL_TERMINATION;
@@ -26,10 +26,10 @@ typedef void(^handlerBlock)(UIAlertAction *alertAction,NSInteger alertIndex);
  @param otherButtonTitle title of other button
  @param handler call back after click  button ,click cancel button index == 0
  */
-+ (void)showAlertWithTitle:(nullable NSString *)title message:(nullable NSString *)message cancelButtonTitle:(nullable NSString *)cancelButtonTitle otherButtonTitle:(nullable NSString *)otherButtonTitle handler:(void (^__nullable)(UIAlertAction *action, NSInteger index))handler;
++ (void)showAlertWithTitle:(nullable NSString *)title message:(nullable NSString *)message cancelButtonTitle:(nullable NSString *)cancelButtonTitle otherButtonTitle:(nullable NSString *)otherButtonTitle handler:(Alert_HandlerBlock)handler;
 
 
-- (void)showAlertControllerWithAnimated:(BOOL)flag handler:(void (^ __nullable)(UIAlertAction *action, NSInteger index))handler;
+- (void)showAlertControllerWithAnimated:(BOOL)flag handler:(Alert_HandlerBlock)handler;
 
 @end
 NS_ASSUME_NONNULL_END
